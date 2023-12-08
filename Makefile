@@ -21,8 +21,9 @@ install: all ${INSTALL_UDEV_${INSTALL_UDEV_RULES}}
 	install -m ${MODE} brightnessctl.1 ${MANDIR}/man1
 
 install_udev_rules:
-	install -d ${DESTDIR}${UDEVDIR}
-	install -m ${MODE} 90-brightnessctl.rules ${DESTDIR}${UDEVDIR}
+	# Performing this in do_install() step.
+	# install -d ${DESTDIR}${UDEVDIR}
+	# install -m ${MODE} 90-brightnessctl.rules ${DESTDIR}${UDEVDIR}
 
 clean:
 	rm -f brightnessctl
