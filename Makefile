@@ -18,11 +18,11 @@ config.mk:
 install: all ${INSTALL_UDEV_${INSTALL_UDEV_RULES}}
 	install -d ${BINDIR} ${MANDIR}/man1
 	install -m ${MODE} brightnessctl   ${BINDIR}/
-	install -m 0644    brightnessctl.1 ${MANDIR}/man1
+	install -m ${MODE} brightnessctl.1 ${MANDIR}/man1
 
 install_udev_rules:
 	install -d ${DESTDIR}${UDEVDIR}
-	install -m 0644 90-brightnessctl.rules ${DESTDIR}${UDEVDIR}
+	install -m ${MODE} 90-brightnessctl.rules ${DESTDIR}${UDEVDIR}
 
 clean:
 	rm -f brightnessctl
