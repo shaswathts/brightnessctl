@@ -4,7 +4,7 @@
 cd "$(dirname -- "$0")"
 
 # Default values
-prefix="${PREFIX:-/usr/local}"
+prefix="${PREFIX:-/usr}"
 pudev="${UDEVDIR:-/lib/udev/rules.d}"
 udev="auto"
 logind="disabled"
