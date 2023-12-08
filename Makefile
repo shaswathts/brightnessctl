@@ -16,9 +16,9 @@ config.mk:
 	@exit 1
 
 install: all ${INSTALL_UDEV_${INSTALL_UDEV_RULES}}
-	install -d ${BINDIR} ${MANDIR}/man1
+	# install -d ${BINDIR} ${MANDIR}/man1
 	install -m ${MODE} brightnessctl   ${BINDIR}/
-	install -m ${MODE} brightnessctl.1 ${MANDIR}/man1
+	# install -m ${MODE} brightnessctl.1 ${MANDIR}/man1
 
 install_udev_rules:
 	# Performing this in do_install() step.
